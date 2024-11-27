@@ -1,0 +1,432 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #000000, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glass Effect */
+.container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Input Styling */
+label {
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent dark background */
+    color: #000000; /* White text color */
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border: 1px solid #007bff; /* Highlight input on focus */
+    outline: none;
+    color: #000000; /* Ensures text remains visible */
+}
+
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e549b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Pop-up for Alerts */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease, top 0.4s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .glass-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-table th, .contact-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #2867af;
+    color: #fff;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.search-box {
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Adds space for icon */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #2867af;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #2867af;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2867af;
+}
+
+.create-account-box {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.create-account-box a {
+    color: #2867af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-account-box a:hover {
+    text-decoration: underline;
+    color: #2867af;
+}
+
+
+
+.login-title {
+    margin-bottom: 26px;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #2867af;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Centering and Layout */
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 23px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 550px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #cccccc;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.card a.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1e549b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.card a.btn:hover {
+    background-color: #2867af;
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* header works */
+
+.header {
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    background-color: #1e1e1e; 
+    color: #ffffff; 
+    z-index: 1000; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.header .logo h1 {
+    font-size: 1.5rem;
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.header .nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.dropdown-btn:hover {
+    color: #007bff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
